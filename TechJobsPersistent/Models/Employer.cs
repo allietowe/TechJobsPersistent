@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace TechJobsPersistent.Models
 {
     public class Employer
@@ -7,14 +9,16 @@ namespace TechJobsPersistent.Models
         public string Name { get; set; }
         public string Location { get; set; }
 
-        public Employer()
-        {
-        }
+        public List<Employer> Employers { get; set; }
 
         public Employer(string name, string location)
         {
             Name = name;
             Location = location;
+        }
+
+        public Employer()
+        {
         }
     }
 }
